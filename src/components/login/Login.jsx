@@ -123,7 +123,7 @@ const Login = () => {
         </div>
       </div>
       <Table
-        className="w-[40%]"
+        className=" md:w-[40%] "
         bordered
         pagination={false}
         dataSource={dataSource}
