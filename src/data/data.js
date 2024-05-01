@@ -84,5 +84,5 @@ export const dataSource = [
 
   export const paths = [
     { path: "/projects", icon: <FundProjectionScreenOutlined />, label: "Projects" },
-    { path: "/tasks", icon: <HighlightOutlined />, label: "Tasks" },
+    { path: "/projects/tasks", icon: <HighlightOutlined />, label: "Tasks" },
   ];
