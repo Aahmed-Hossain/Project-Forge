@@ -40,7 +40,7 @@ export const dataSource = [
     { email: "ahmed.404@gmail.com", password: "ahmed404" },
   ];
 
-  export const projects = [
+  export const dummyProjects = [
     {
       id: 1,
       title: "Project Forge",
