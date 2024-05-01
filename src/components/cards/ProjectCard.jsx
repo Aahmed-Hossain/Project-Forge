@@ -1,26 +1,29 @@
 import React from 'react'
 import { Card } from "antd";
-import {
-  EditOutlined,
-  DeleteOutlined,
-  ArrowsAltOutlined ,
+import {EditOutlined,DeleteOutlined,ArrowsAltOutlined ,
 } from "@ant-design/icons";
-const ProjectCard = () => {
+
+const ProjectCard = ({projects}) => {
   return (
-    <div><Card
-    bordered={true}
-    hoverable={true}
-    title="Project Forge"
-    style={{ width: 300 }}
-    className="shadow-md"
-    actions={[
-      <ArrowsAltOutlined key="view" />,
-      <EditOutlined key="edit"/>,
-      <DeleteOutlined key="delete" />,
-    ]}
-  >
-    <p className="text-gray-600 font-normal">Develop a dashboard for a project management application that allows users to manage tasks, and projects.</p>
-  </Card></div>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-6'>
+      {projects.map(project => (
+        <Card
+          key={project.id} 
+          bordered={true}
+          hoverable={true}
+          title={project.title}
+          style={{ width: 300 }}
+          className="shadow-md"
+          actions={[
+            <ArrowsAltOutlined key="view" />,
+            <EditOutlined key="edit" />,
+            <DeleteOutlined key="delete" />,
+          ]}
+        >
+          <p className="text-gray-600 font-semibold">{project.description}</p>
+        </Card>
+      ))}
+    </div>
   )
 }
 
