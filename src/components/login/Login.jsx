@@ -4,53 +4,19 @@ import logo from "../../assets/images/logo.png";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Modal, Form, Input, Table } from "antd";
 import { useRouter } from "next/navigation";
-const dataSource = [
-  {
-    key: "1",
-    email: "ahmed@hossain.com",
-    password: "ahmed1",
-  },
-  {
-    key: "2",
-    email: "ahmed.hsn.404@gmail.com",
-    password: "hossain1",
-  },
-  {
-    key: "3",
-    email: "ahmed.404@gmail.com",
-    password: "ahmed404",
-  },
-];
-
-const columns = [
-  {
-    title: "Email",
-    dataIndex: "email",
-    key: "email",
-  },
-  {
-    title: "Password",
-    dataIndex: "password",
-    key: "password",
-  },
-];
+import { columns, dataSource,users } from './../../data/data';
 
 const Login = () => {
   const router = useRouter();
 
   const onFinish = (values) => {
-    const users = [
-      { email: "ahmed@hossain.com", password: "ahmed1" },
-      { email: "ahmed.hsn.404@gmail.com", password: "hossain1" },
-      { email: "ahmed.404@gmail.com", password: "ahmed404" },
-    ];
     const foundUser = users.find(
       (user) => user.email === values.email && user.password === values.password
     );
 
     if (foundUser) {
       Modal.success({ content: "Login successful!" });
-      router.push("/dashboard");
+      router.push("/projects");
     } else {
       Modal.error({ content: "Invalid email or password." });
     }
