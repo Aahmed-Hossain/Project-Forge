@@ -16,8 +16,34 @@ const projects = [
       "Projects Overview Page",
       "Project Details Page",
     ],
-    teamMembers: ["Shakil Talukder", "Ahmed Hossain", "Hasib Imam"],
+    teamMembers: ["Tonny Bairstow", "Ahmed Hossain", "John Doe"],
     recentActivities: ['Interactive Dashboard', 'Task Filters', 'Search Functionality']
+  },
+  {
+    id: 2,
+    title: "Wallet Xpert",
+    description:
+      "Develop a Website for financial management application that allows users to manage the income and expenses",
+    tasks: [
+      "Dashboard Interface",
+      "Authentication Page",
+      "Transaction section",
+    ],
+    teamMembers: ["Tofail Ahmed", "Ahmed Hossain", "Ridwanul Alam"],
+    recentActivities: ['Interactive Dashboard', 'Task Filters', 'Search Functionality']
+  },
+  {
+    id: 3,
+    title: "Real Estate",
+    description:
+      "Develop a real estate project management application that allows users to sell , buy the real estate products.",
+    tasks: [
+      "Authentication Page",
+      "Projects Overview Page",
+      "Project Details Page",
+    ],
+    teamMembers: ["Ahmed Bin Kabir", "Ahmed Hossain", "Hossain Ahmed"],
+    recentActivities: ['Interactive Dashboard', 'Price Filters', 'Search Functionality']
   },
 ];
 const ProjectPage = () => {
