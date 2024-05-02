@@ -31,7 +31,29 @@ export const useProjectStore = create((set) => ({
   },
 }
 ));
-export const useTasksStore = create((set)=>({
-tasks: tasks,
 
-}))
+export const useTasksStore = create((set) => ({
+  tasks: tasks, 
+  setCurrentTask: (taskId) => {
+    const foundTask = tasks.find((task) => task.id === taskId);
+    set({ currentTask: foundTask || null });
+  },
+  addTask: (newTask) => {
+    set((state) => ({ tasks: [...state.tasks, newTask] }));
+  },
+  editTask: (taskId, updatedTask) => {
+    set((state) => ({
+      tasks: state.tasks.map((task) =>
+        task.id === taskId ? { ...task, ...updatedTask } : task
+      ),
+    }));
+  },
+  deleteTask: (taskId) => {
+    set((state) => {
+      const updatedTask = state.tasks.filter(
+        (task) => task.id !== taskId
+      );
+      return { tasks: updatedTask };
+    });
+  },
+}));

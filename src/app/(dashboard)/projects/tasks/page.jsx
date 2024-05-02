@@ -1,8 +1,13 @@
+"use client"
+import TaskCard from '@/components/cards/TaskCard'
 import React from 'react'
-
+import { useTasksStore } from '@/zustand/useStore';
 const TasksPage = () => {
+  const { tasks } = useTasksStore();
   return (
-    <div>TasksPage</div>
+    <div>
+      <TaskCard tasks={tasks} />
+    </div>
   )
 }
 

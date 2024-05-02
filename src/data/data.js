@@ -87,7 +87,7 @@ export const dataSource = [
     { path: "/projects/tasks", icon: <HighlightOutlined />, label: "Tasks" },
   ];
   export const tasks =[
-    {id: 1, title: 'Authentication', projectName: 'Project Forge App', assignedTo: 'Ahmed Hoosain', deadline: '02/05/24', status:'todo'},
-    {id: 1, title: 'Landing Page', projectName: 'Real Estate App', assignedTo: 'Hoosain Ahmed', deadline: '31/12/23', status:'done'},
-    {id: 1, title: 'Project Showcase', projectName: 'Portfolio App', assignedTo: 'Ahmed Hoosain', deadline: '11/02/23', status:'in_progress'}
+    {id: 1, title: 'Authentication', description: "Develop a dashboard for a project management application that allows users to manage tasks, and projects.", projectName: 'Project Forge App', assignedTo: 'Ahmed Hoosain', deadline: '02/05/24', status:'todo'},
+    {id: 2, title: 'Landing Page',description: "Develop a Website for financial management application that allows users to manage the income and expenses", projectName: 'Real Estate App', assignedTo: 'Hoosain Ahmed', deadline: '31/12/23', status:'done'},
+    {id: 3, title: 'Project Showcase',description: "Develop a real estate project management application that allows users to sell , buy the real estate products.", projectName: 'Portfolio App', assignedTo: 'Ahmed Hoosain', deadline: '11/02/23', status:'in_progress'}
   ]
