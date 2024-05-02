@@ -1,11 +1,10 @@
 "use client";
 import { useQuery } from "react-query";
 import React from "react";
-import useProjectsData from "@/hooks/useProjectsData";
 import { Flex, Spin } from "antd";
 import ProjectCard from "@/components/cards/ProjectCard";
-import { useProjectStore } from "@/zustand/useStore";
 import { useEffect } from "react";
+import { useProjectStore } from '@/zustand/useStore';
 const ProjectPage = () => {
   const { data, isLoading, error } = useQuery("projects", async () => {
     const response = await fetch(

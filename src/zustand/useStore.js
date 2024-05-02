@@ -3,6 +3,8 @@ import { create } from "zustand";
 export const useProjectStore = create((set) => ({
   projects: [],
   setProjects: (projects) => set(() => ({ projects })),
+
+  // setProjects: (projects) => set({ projects }),
   // singleProject: (id) =>
   //   set((state) => ({
   //     project: state.projects.find((project) =>
@@ -27,8 +29,9 @@ export const useProjectStore = create((set) => ({
       return { projects: updatedProject };
     });
   },
-},
-{
-  tasks: tasks,
 }
 ));
+export const useTasksStore = create((set)=>({
+tasks: tasks,
+
+}))

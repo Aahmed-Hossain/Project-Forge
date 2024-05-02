@@ -13,7 +13,7 @@ const ProjectCard = ({projects}) => {
   
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-6'>
-      {projects.map(project => (
+      {projects?.map(project => (
         <Card
           key={project.id} 
           bordered={true}
