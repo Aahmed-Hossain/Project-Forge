@@ -39,7 +39,7 @@ const AntdDrawer = ({ children }) => {
         </Menu>
         
         
-        <button className="text-gray-400 border py-1 px-8 ml-2 hover:text-white hover:border-gray-400 font-bold">Add Task</button>
+       
    
       </Sider>
       <Layout className="lg:ms-[200px] ms-0">
