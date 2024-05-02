@@ -1,8 +1,16 @@
-import { dummyProjects } from "@/data/data";
+import { tasks } from "@/data/data";
 import { create } from "zustand";
 export const useProjectStore = create((set) => ({
   projects: [],
-  setProjects: (projects)=>set(()=> ({projects} , console.log(projects))) ,
+  setProjects: (projects) => set(() => ({ projects })),
+  // singleProject: (id) =>
+  //   set((state) => ({
+  //     project: state.projects.find((project) =>
+  //     {
+  //       project.id === id
+  //       console.log(project) }
+  //     )
+  //   })),
   addProject: (newProject) =>
     set((state) => ({ projects: [...state.projects, newProject] })),
   editProject: (projectId, updatedProject) =>
@@ -19,4 +27,8 @@ export const useProjectStore = create((set) => ({
       return { projects: updatedProject };
     });
   },
-}));
+},
+{
+  tasks: tasks,
+}
+));

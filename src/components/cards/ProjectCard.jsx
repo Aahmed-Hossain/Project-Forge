@@ -9,7 +9,6 @@ const ProjectCard = ({projects}) => {
   const { deleteProject } = useProjectStore();
   const handleDeleteProject = (projectId) => {
     deleteProject(projectId);
-   console.log('cliecked')
   };
   
   return (

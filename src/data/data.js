@@ -86,3 +86,8 @@ export const dataSource = [
     { path: "/projects", icon: <FundProjectionScreenOutlined />, label: "Projects" },
     { path: "/projects/tasks", icon: <HighlightOutlined />, label: "Tasks" },
   ];
+  export const tasks =[
+    {id: 1, title: 'Authentication', projectName: 'Project Forge App', assignedTo: 'Ahmed Hoosain', deadline: '02/05/24', status:'todo'},
+    {id: 1, title: 'Landing Page', projectName: 'Real Estate App', assignedTo: 'Hoosain Ahmed', deadline: '31/12/23', status:'done'},
+    {id: 1, title: 'Project Showcase', projectName: 'Portfolio App', assignedTo: 'Ahmed Hoosain', deadline: '11/02/23', status:'in_progress'}
+  ]

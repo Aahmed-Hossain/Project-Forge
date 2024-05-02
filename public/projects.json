@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "title": "project Forge",
+      "title": "Project Forge",
       "description": "Develop a dashboard for a project management application that allows users to manage tasks, and projects.",
       "tasks": [
         "Authentication Page",
