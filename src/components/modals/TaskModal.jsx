@@ -1,28 +1,53 @@
-import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
+import React from 'react';
+import {  Modal } from "antd";
+import {
+    Form,
+    Input,
+  } from 'antd';
 
-const TaskModal = ({open, onOk, onCancel}) => {
-//     const [isModalOpen, setIsModalOpen] = useState(false);
-//   const showModal = () => {
-//     setIsModalOpen(true);
-//   };
-//   const handleOk = () => {
-//     setIsModalOpen(false);
-//   };
-//   const handleCancel = () => {
-//     setIsModalOpen(false);
-//   };
+const formItemLayout = {
+  labelCol: {
+    xs: { span: 24 },
+    sm: { span: 6 },
+  },
+  wrapperCol: {
+    xs: { span: 24 },
+    sm: { span: 14 },
+  },
+};
+
+const TaskModal = ({ open, onOk, onCancel }) => {
+    const [form] = Form.useForm()
+    const onFinish = (values) => {
+        onOk(values);
+        console.log(values)
+        }
   return (
     <div>
-         <Button type="primary" onClick={showModal}>
-    Open Modal
-  </Button>
-  <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-    <p>Some contents...</p>
-    <p>Some contents...</p>
-    <p>Some contents...</p>
-  </Modal></div>
-  )
-}
+      <Modal
+         title="Add Task"
+         visible={open}
+         onOk={() => form.submit()} 
+         onCancel={onCancel}
+         okText="Add"
+         cancelText="Cancel"
+      >
+        <Form onFinish={onFinish}  form={form} {...formItemLayout} variant="filled" style={{ maxWidth: 600 }}>
+    <Form.Item label="Title" name="Input" rules={[{ required: true  , message: 'Please input!' }]}>
+      <Input placeholder="Task title"/>
+    </Form.Item>
 
-export default TaskModal
+    <Form.Item
+      label="Description"
+      name="TextArea"
+      rules={[{ required: true, message: 'Please input description!' }]}
+    >
+      <Input.TextArea placeholder="Task description" />
+    </Form.Item>
+  </Form>
+      </Modal>
+    </div>
+  );
+};
+
+export default TaskModal;

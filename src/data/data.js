@@ -19,6 +19,11 @@ export const dataSource = [
       email: "ahmed.404@gmail.com",
       password: "ahmed404",
     },
+    {
+      key: "4",
+      email: "404@gmail.com",
+      password: "404@gmail",
+    },
   ];
   
   export const columns = [
@@ -38,6 +43,7 @@ export const dataSource = [
     { email: "ahmed@hossain.com", password: "ahmed1" },
     { email: "ahmed.hsn.404@gmail.com", password: "hossain1" },
     { email: "ahmed.404@gmail.com", password: "ahmed404" },
+    { email: "404@gmail.com", password: "404@gmail" },
   ];
 
   export const dummyProjects = [
